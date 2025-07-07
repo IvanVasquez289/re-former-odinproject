@@ -1,0 +1,22 @@
+<%= form_with model: @user do |form|  %>
+    <%= render 'shared/form_errors', object: form.object %>
+    <div class="field">
+        <div>
+        <%= form.label :username, "Nombre" %>
+        </div>
+        <%= form.text_field :username, placeholder:"Your name" %>
+    </div>    
+    <div>
+        <div>
+            <%= form.label :email, "Correo Electrónico" %>
+        </div>
+        <%= form.email_field :email, placeholder:"example@example.com" %>
+    </div>    
+    <div>
+        <div>
+            <%= form.label :password, "Contraseña" %>
+        </div>
+        <%= form.password_field :password , placeholder:"*******"%>
+    </div>
+    <%= form.submit "Crear"%>
+<% end %>
